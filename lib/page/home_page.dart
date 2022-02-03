@@ -177,8 +177,9 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             children: [
                               Container(
-                                width: 350,
+                                width: MediaQuery.of(context).size.width,
                                 height: 100,
+                                margin: EdgeInsets.symmetric(horizontal: 15),
                                 decoration: BoxDecoration(
                                     color: Colors.grey[200],
                                     borderRadius: BorderRadius.circular(10),
@@ -190,12 +191,14 @@ class _HomePageState extends State<HomePage> {
                                         offset: const Offset(0, 3),
                                       ),
                                     ]),
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 15, vertical: 10),
-                                      child: FutureBuilder<List<DatabaseSiswa>>(
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 15, vertical: 15),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      FutureBuilder<List<DatabaseSiswa>>(
                                         future: getDataa(),
                                         builder: (context, snapshot) {
                                           if (snapshot.hasError) {
@@ -226,7 +229,7 @@ class _HomePageState extends State<HomePage> {
                                                     data[0].jurusan.toString(),
                                                     style: Theme.of(context)
                                                         .textTheme
-                                                        .bodyText2,
+                                                        .caption,
                                                   ),
                                                   Text(
                                                     'Tingkat ' +
@@ -235,13 +238,13 @@ class _HomePageState extends State<HomePage> {
                                                             .toString(),
                                                     style: Theme.of(context)
                                                         .textTheme
-                                                        .bodyText2,
+                                                        .caption,
                                                   ),
                                                   Text(
                                                     data[0].kelas,
                                                     style: Theme.of(context)
                                                         .textTheme
-                                                        .bodyText2,
+                                                        .caption,
                                                   ),
                                                 ]);
                                           }
@@ -250,17 +253,13 @@ class _HomePageState extends State<HomePage> {
                                           );
                                         },
                                       ),
-                                    ),
-                                    const Spacer(),
-                                    Container(
-                                      padding: const EdgeInsets.only(right: 20),
-                                      child: const CircleAvatar(
+                                      const CircleAvatar(
                                         backgroundImage: AssetImage(
                                             'asset/suharyunibulat.png'),
                                         radius: 30,
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],
@@ -268,7 +267,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         SliverToBoxAdapter(
                           child: SizedBox(
-                            height: 12,
+                            height: 15,
                             child: Container(),
                           ),
                         ),
