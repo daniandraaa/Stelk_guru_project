@@ -44,9 +44,7 @@ class DatabaseSiswa {
   final String nameu;
   final String kelas;
   final String nis;
-  final String alamat;
   final String jeniskelamin;
-  // final List<String> hobi;
   final String? jurusan;
   final String? tingkat;
   final String nomorhp;
@@ -54,7 +52,6 @@ class DatabaseSiswa {
 
   DatabaseSiswa({
     required this.nameu,
-    required this.alamat,
     // required this.hobi,
     required this.kelas,
     required this.jeniskelamin,
@@ -70,12 +67,11 @@ class DatabaseSiswa {
     return DatabaseSiswa(
       nameu: map["nama"],
       kelas: map["kelas"],
-      jeniskelamin: map["jenis_kelamin"],
+      jeniskelamin: map["jeniskelamin"],
       nis: map["nis"],
-      alamat: map["alamat"],
       jurusan: map["jurusan"],
       tingkat: map["tingkat"],
-      nomorhp: map["nomor_hp"],
+      nomorhp: map["nomorhp"],
       email: map["email"],
       // hobi: List<String>.from(map['hobi']),
     );
