@@ -40,6 +40,7 @@ dependencies:
   get: ^4.6.1
   change_app_package_name: ^1.0.0
   url_launcher: ^6.0.18
+  dropdown_search: ^2.0.1
 
 dev_dependencies:
   flutter_test:

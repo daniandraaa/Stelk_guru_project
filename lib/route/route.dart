@@ -62,6 +62,7 @@ import 'package:siswa/page/prestasi_page.dart';
 import 'package:siswa/page/rpl_forum_page.dart';
 import 'package:siswa/page/syaratdanketentuan.dart';
 import 'package:siswa/page/tambah_bab.dart';
+import 'package:siswa/page/tambahmodulbaru.dart';
 import 'package:siswa/page/tel_forum_page.dart';
 import 'package:siswa/page/tentang_kami.dart';
 import 'package:siswa/page/tja_forum_page.dart';
@@ -145,6 +146,7 @@ class Routes {
   static const String laporan1aij = '/laporan1aij';
   static const String bab1modulariha = 'bab1modulariha';
   static const String tugasbab1binggris = '/tugasbab1binggris';
+  static const String tambahmodulbaru = '/tambahmodulbaru';
 
   static var args;
 
@@ -464,6 +466,9 @@ class Routes {
 
       case tugasbab1binggris:
         return pageRoute(TugasBab1Binggris());
+
+      case tambahmodulbaru:
+        return pageRoute(TambahMobulBaru());
 
       default:
         return pageRoute(const Scaffold(

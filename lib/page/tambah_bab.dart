@@ -18,55 +18,49 @@ class TambahBab extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(15),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Nama BAB'),
-              // TextField(
-              //   decoration: InputDecoration(hintText: ('Masukkan nama Bab')),
-              // ),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Bab 6 : Virtual Private Network (VPN'),
-                  Icon(Icons.create_outlined)
-                ],
-              ),
-              const Divider(
-                height: 30,
-                indent: 15,
-                endIndent: 15,
-                thickness: 1,
-              ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 100, vertical: 100),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30))),
-                  onPressed: () =>
-                      Navigator.pushNamed(context, Routes.aijmapelpage),
-                  child: SizedBox(
-                      width: 500,
-                      child: Center(
-                        child: Center(
-                          child: Text(
-                            'Simpan',
-                            style: Theme.of(context)
-                                .textTheme
-                                .button
-                                ?.copyWith(color: Colors.white),
-                          ),
-                        ),
-                      )),
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(15),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Nama BAB',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                 ),
-              ),
-            ],
+                const TextField(
+                  decoration: InputDecoration(
+                      hintText: ('Bab 6 : Virtual Private Network (VPN)'),
+                      suffixIcon: Icon(Icons.create)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(70, 600, 70, 0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.indigo[400],
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30))),
+                    onPressed: () =>
+                        Navigator.pushNamed(context, Routes.aijmapelpage),
+                    child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        height: 45,
+                        child: Center(
+                          child: Center(
+                            child: Text(
+                              'Simpan',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .button
+                                  ?.copyWith(color: Colors.white),
+                            ),
+                          ),
+                        )),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

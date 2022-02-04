@@ -32,17 +32,16 @@ class AIJMapelPage extends StatelessWidget {
                         width: MediaQuery.of(context).size.width,
                         height: 80,
                         decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.circular(15),
-                          // boxShadow: [
-                          //   BoxShadow(
-                          //     color: Colors.grey.withOpacity(0.6),
-                          //     spreadRadius: 0.5,
-                          //     blurRadius: 10,
-                          //     offset: const Offset(0, 1),
-                          //   )
-                          // ]
-                        ),
+                            color: Colors.grey[200],
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.4),
+                                spreadRadius: 1,
+                                blurRadius: 5,
+                                offset: const Offset(0, 3),
+                              ),
+                            ]),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 15, vertical: 15),
@@ -82,7 +81,6 @@ class AIJMapelPage extends StatelessWidget {
                   const TabBar(
                     labelColor: Colors.black,
                     indicatorColor: Colors.red,
-
                     tabs: [
                       Tab(
                         text: 'Materi',
@@ -103,12 +101,17 @@ class AIJMapelPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.add_circle,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 300),
+                    child: IconButton(
+                      color: Colors.indigo[400],
+                      iconSize: 50,
+                      icon: const Icon(
+                        Icons.add_circle,
+                      ),
+                      onPressed: () =>
+                          Navigator.pushNamed(context, Routes.tambahbab),
                     ),
-                    onPressed: () =>
-                        Navigator.pushNamed(context, Routes.tambahbab),
                   ),
                 ],
               )),

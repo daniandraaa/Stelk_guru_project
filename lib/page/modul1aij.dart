@@ -25,6 +25,7 @@ class Modul1Aij extends StatelessWidget {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
+                      primary: Colors.indigo[400],
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0))),
                   onPressed: () => Navigator.push(
@@ -243,16 +244,17 @@ class Modul1Aij extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 100, vertical: 100),
+                  padding: const EdgeInsets.fromLTRB(70, 140, 70, 0),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                        primary: Colors.indigo[400],
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30))),
                     onPressed: () =>
                         Navigator.pushNamed(context, Routes.bab1aij),
                     child: SizedBox(
-                        width: 500,
+                        height: 45,
+                        width: MediaQuery.of(context).size.width,
                         child: Center(
                           child: Center(
                             child: Text(
