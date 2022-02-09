@@ -62,7 +62,7 @@ class ForumPage extends StatelessWidget {
                               context, Routes.detailforum, 
                               arguments: {
                                 'title': 'Rekayasa Perangkat Lunak',
-                                'imagebanner': 'asset/rplforum.png',
+                                'imagebanner': 'asset/rplforume.png',
                                 'profilguru': 'asset/suharyunibulat.png',
                                 'profil1': 'asset/unknownbulat.png',
                                 'profil2': 'asset/unknownbulat.png',
