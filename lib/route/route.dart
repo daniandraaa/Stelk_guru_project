@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:siswa/detailforum.dart';
+import 'package:siswa/detailguru.dart';
 import 'package:siswa/page/agama_mapel.dart';
 import 'package:siswa/page/aij_mapel_page.dart';
 import 'package:siswa/page/asjar_mapel_page.dart';
@@ -33,19 +35,6 @@ import 'package:siswa/page/bantuan.dart';
 import 'package:siswa/page/bertanya_forum_page.dart';
 import 'package:siswa/page/bk_mapel.dart';
 import 'package:siswa/page/forum_page.dart';
-import 'package:siswa/page/guru10_asrul.dart';
-import 'package:siswa/page/guru11_Sriwahyuningsih.dart';
-import 'package:siswa/page/guru12_raodatul.dart';
-import 'package:siswa/page/guru13_suharyuni.dart';
-import 'package:siswa/page/guru1_nurhayati.dart';
-import 'package:siswa/page/guru2_besse.dart';
-import 'package:siswa/page/guru3_chaerunnisa.dart';
-import 'package:siswa/page/guru4_matius.dart';
-import 'package:siswa/page/guru5_bakri.dart';
-import 'package:siswa/page/guru6_suradi.dart';
-import 'package:siswa/page/guru7_nurfadhilah.dart';
-import 'package:siswa/page/guru8_abuali.dart';
-import 'package:siswa/page/guru9_ahwan.dart';
 import 'package:siswa/page/guru_page.dart';
 import 'package:siswa/page/kebijakanprivasi.dart';
 import 'package:siswa/page/kelasku_page.dart';
@@ -74,6 +63,8 @@ import 'package:siswa/page/wan_mapel_page.dart';
 
 class Routes {
   static const String kelasku = '/kelasku';
+  static const String detailguru = '/detailguru';
+  static const String detailforum = '/detailforum';
   static const String forum = '/forum';
   static const String guru = '/guru';
   static const String prestasi = '/prestasi';
@@ -161,6 +152,17 @@ class Routes {
       case kelasku:
         return pageRoute(const KelaskuPage());
 
+        case detailguru: 
+      final Map<String, dynamic> args =
+            settings.arguments as Map<String, dynamic>;
+            return pageRoute(PageDetailguru(mapel: args['mapel'], namaLengkap: args['namaLengkap'], profil: args['profil'], image: args['image'], hubungi: args['hubungi'],));
+
+   case detailforum: 
+      final Map<String, dynamic> args =
+            settings.arguments as Map<String, dynamic>;
+            return pageRoute(PageDetailForum(caption1: args['caption1'], caption2: args['caption2'], imagebanner: args['imagebanner'], nama1: args['nama1'], nama2: args['nama2'], guru: args['guru'], title: args['title'], captionguru: args['captionguru'], judulcaptionguru: args['judulcaptionguru'], profil1: args['profil1'], profil2: args['profil2'], profilguru: args['profilguru']));
+
+
       case forum:
         return pageRoute(const ForumPage());
 
@@ -205,45 +207,6 @@ class Routes {
 
       case asjarmapelpage:
         return pageRoute(const AsjarMapelPage());
-
-      case guru1nurhayati:
-        return pageRoute(const NurhayatiGuruProfilPage());
-
-      case guru2besse:
-        return pageRoute(const BesseGuruProfilPage());
-
-      case guru3chaerunnisa:
-        return pageRoute(const ChaerunnisaGuruProfilPage());
-
-      case guru4matius:
-        return pageRoute(const MatiusGuruProfilPage());
-
-      case guru5bakri:
-        return pageRoute(const BakriGuruProfilPage());
-
-      case guru6suardi:
-        return pageRoute(const SuardiGuruProfilPage());
-
-      case guru7nurfadhilah:
-        return pageRoute(const NurfadhilahGuruProfilPage());
-
-      case guru8abuali:
-        return pageRoute(const AbuAliGuruProfilPage());
-
-      case guru9ahwan:
-        return pageRoute(const AhwanGuruProfilPage());
-
-      case guru10asrul:
-        return pageRoute(const AsrulGuruProfilPage());
-
-      case guru11sri:
-        return pageRoute(const SriWahyuningsihGuruProfilPage());
-
-      case guru12raodatul:
-        return pageRoute(const RaodatulGuruProfilPage());
-
-      case guru13suharyuni:
-        return pageRoute(const SuharyuniGuruProfilPage());
 
       // case bab1binggris:
       //   final args = settings.arguments as Map;

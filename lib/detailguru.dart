@@ -20,8 +20,13 @@ class Behavior extends ScrollBehavior {
   }
 }
 
-class NurfadhilahGuruProfilPage extends StatelessWidget {
-  const NurfadhilahGuruProfilPage({Key? key}) : super(key: key);
+class PageDetailguru extends StatelessWidget {
+  final String namaLengkap;
+  final String mapel;
+  final String profil;
+  final String image;
+  final String hubungi;
+  const PageDetailguru({Key? key, required this.mapel, required this.namaLengkap, required this.profil, required this.image, required this.hubungi}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +48,7 @@ class NurfadhilahGuruProfilPage extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 child: Image.asset(
-                  'asset/aktivitas1.png',
+                  image,
                   fit: BoxFit.fitWidth,
                 ),
               ),
@@ -66,7 +71,7 @@ class NurfadhilahGuruProfilPage extends StatelessWidget {
                           height: 2,
                         ),
                         Text(
-                          'Nur Fadhilah, S.Pd, M.pd.',
+                          namaLengkap,
                           style: Theme.of(context).textTheme.bodyText2,
                         ),
                         const SizedBox(
@@ -83,7 +88,7 @@ class NurfadhilahGuruProfilPage extends StatelessWidget {
                           height: 2,
                         ),
                         Text(
-                          'Administrasi Infrastruktur Jaringan',
+                          mapel,
                           style: Theme.of(context).textTheme.bodyText2,
                         ),
                         const SizedBox(
@@ -100,7 +105,7 @@ class NurfadhilahGuruProfilPage extends StatelessWidget {
                           height: 2,
                         ),
                         Text(
-                          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
+                          profil,
                           style: Theme.of(context).textTheme.bodyText2,
                         ),
                         const SizedBox(
@@ -119,7 +124,7 @@ class NurfadhilahGuruProfilPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30.0))),
                   onPressed: () async {
                     try {
-                      await call('+6282188974105');
+                      await call(hubungi);
                       return;
                     } catch (e) {
                       showDialog(
@@ -139,9 +144,9 @@ class NurfadhilahGuruProfilPage extends StatelessWidget {
                       )),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
-              )
+              ),
             ],
           ),
         ),
