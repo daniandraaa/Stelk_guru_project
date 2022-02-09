@@ -30,8 +30,52 @@ class GuruPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: SafeArea(
             child: Container(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.symmetric(horizontal:20),
               child: Column(children: [
+                SizedBox(
+                  height: 15,
+                ),
+                 SizedBox(
+                   height: 40,
+                   child: TextField(
+                     decoration: InputDecoration(
+                      
+                       contentPadding:
+                           const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+                       hintText: "Cari Guru...",
+                       prefixIcon: Icon(
+                         Icons.search
+                       ),
+                       fillColor: Colors.grey[350],
+                       filled: true,
+                       border: const OutlineInputBorder(
+                           borderSide:
+                               BorderSide(width: 1, color: Colors.transparent)),
+                       disabledBorder: const OutlineInputBorder(
+                           borderSide:
+                               BorderSide(width: 1, color: Colors.transparent)),
+                       enabledBorder: OutlineInputBorder(
+                           borderRadius: BorderRadius.circular(55),
+                           borderSide: const BorderSide(
+                               width: 1, color: Colors.transparent)),
+                       errorBorder: const OutlineInputBorder(
+                           borderSide:
+                               BorderSide(width: 1, color: Colors.transparent)),
+                       focusedBorder: OutlineInputBorder(
+                         borderRadius: BorderRadius.circular(55),
+                         borderSide:
+                             const BorderSide(width: 1, color: Colors.transparent),
+                       ),
+                       focusedErrorBorder: OutlineInputBorder(
+                           borderRadius: BorderRadius.circular(55),
+                           borderSide: const BorderSide(
+                               width: 1, color: Colors.transparent)),
+                     ),
+                   ),
+                 ),
+                 SizedBox(
+                   height: 15,
+                 ),
                 Row(
                   children: [
                     Image.asset(
