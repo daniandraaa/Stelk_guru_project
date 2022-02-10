@@ -175,6 +175,14 @@ class _LoginPageState extends State<LoginPage> {
                         keyboardType: TextInputType.phone,
                         controller: phoneNumber,
                         decoration: InputDecoration(
+                            prefixIconConstraints: BoxConstraints(
+                             minHeight: 0,minWidth: 0,
+                           ),
+                           
+                          prefixIcon: Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Text('+62 |', style: Theme.of(context).textTheme.subtitle1,),
+                          ),
                           fillColor: Colors.grey[350],
                           filled: true,
                           contentPadding: const EdgeInsets.symmetric(

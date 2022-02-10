@@ -23,7 +23,6 @@ import 'package:siswa/page/bab2_asjar.dart';
 import 'package:siswa/page/bab2_bindo.dart';
 import 'package:siswa/page/bab2_binggris.dart';
 import 'package:siswa/page/bab2_bk.dart';
-import 'package:siswa/page/bab2_mtk.dart';
 import 'package:siswa/page/bab2_penjas.dart';
 import 'package:siswa/page/bab2_pkn.dart';
 import 'package:siswa/page/bab2_pkwu.dart';
@@ -36,29 +35,25 @@ import 'package:siswa/page/bertanya_forum_page.dart';
 import 'package:siswa/page/bk_mapel.dart';
 import 'package:siswa/page/forum_page.dart';
 import 'package:siswa/page/guru_page.dart';
+import 'package:siswa/page/home/kelasku_page.dart';
 import 'package:siswa/page/kebijakanprivasi.dart';
-import 'package:siswa/page/kelasku_page.dart';
 import 'package:siswa/page/komentar_page.dart';
 import 'package:siswa/page/laporan1_aij.dart';
 import 'package:siswa/page/login_page.dart';
-import 'package:siswa/page/matematika_mapel.dart';
 import 'package:siswa/page/modul1aij.dart';
+import 'package:siswa/page/mtk/bab2_mtk.dart';
+import 'package:siswa/page/mtk/matematika_mapel.dart';
 import 'package:siswa/page/pemberitahuan.dart';
 import 'package:siswa/page/penjas_mapel_page.dart';
 import 'package:siswa/page/pkn_mapel.dart';
 import 'package:siswa/page/pkwu_mapel_page.dart';
 import 'package:siswa/page/prestasi_page.dart';
-import 'package:siswa/page/rpl_forum_page.dart';
 import 'package:siswa/page/syaratdanketentuan.dart';
 import 'package:siswa/page/tambah_bab.dart';
 import 'package:siswa/page/tambahmodulbaru.dart';
-import 'package:siswa/page/tel_forum_page.dart';
 import 'package:siswa/page/tentang_kami.dart';
-import 'package:siswa/page/tja_forum_page.dart';
-import 'package:siswa/page/tkj_forum_page.dart';
 import 'package:siswa/page/tlj_mapel_page.dart';
 import 'package:siswa/page/tugasbab1binggris.dart';
-import 'package:siswa/page/upw_forum_page.dart';
 import 'package:siswa/page/wan_mapel_page.dart';
 
 class Routes {
@@ -378,21 +373,6 @@ class Routes {
 
       case uploadtugas:
         return pageRoute(const TugasBab1Binggris());
-
-      case rplforumpage:
-        return pageRoute(const RplForumPage());
-
-      case tkjforumpage:
-        return pageRoute(const TkjForumPage());
-
-      case tjaforumpage:
-        return pageRoute(const TjaForumPage());
-
-      case telforumpage:
-        return pageRoute(const TelForumPage());
-
-      case upwforumpage:
-        return pageRoute(const UpwForumPage());
 
       case komentarpage:
         return pageRoute(const KomentarPage());

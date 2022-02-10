@@ -103,12 +103,23 @@ class TljMapelPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  IconButton(
-                    icon: Icon(
-                      Icons.add_circle,
+                  Positioned(
+                    right: 15,
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: IconButton(
+                          color: Colors.indigo[400],
+                          iconSize: 50,
+                          icon: const Icon(
+                            Icons.add_circle,
+                          ),
+                          onPressed: () =>
+                              Navigator.pushNamed(context, Routes.tambahbab),
+                        ),
+                      ),
                     ),
-                    onPressed: () =>
-                        Navigator.pushNamed(context, Routes.tambahbab),
                   ),
                 ],
               )),

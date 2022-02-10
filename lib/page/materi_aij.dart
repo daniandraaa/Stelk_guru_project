@@ -13,6 +13,7 @@ class MateriAij extends StatelessWidget {
           child: Container(
               padding: const EdgeInsets.only(left: 7),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     'Bab 1 : Pengertian Control Panel Hosting',
@@ -35,6 +36,7 @@ class MateriAij extends StatelessWidget {
         Container(
             padding: const EdgeInsets.only(left: 7),
             child: Row(
+               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   'Bab 2 : Mengkonfigurasi Control Panel Hosting',
@@ -54,6 +56,7 @@ class MateriAij extends StatelessWidget {
         Container(
           padding: const EdgeInsets.only(left: 7),
           child: Row(
+             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 'Bab 3 : Quiz',
@@ -74,6 +77,7 @@ class MateriAij extends StatelessWidget {
         Container(
             padding: const EdgeInsets.only(left: 7),
             child: Row(
+               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   'Bab 4 : Mengkonfigurasi VPN Server',
@@ -93,6 +97,7 @@ class MateriAij extends StatelessWidget {
         Container(
             padding: const EdgeInsets.only(left: 7),
             child: Row(
+               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   'Bab 5 : Ujian Semester',

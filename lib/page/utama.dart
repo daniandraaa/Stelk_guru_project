@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:siswa/page/aktivitas.dart';
-import 'package:siswa/page/home_page.dart';
-import 'package:siswa/page/kelola.dart';
+import 'package:siswa/page/home/aktivitas.dart';
+import 'package:siswa/page/home/home_page.dart';
+import 'package:siswa/page/home/kelola.dart';
 
 class PageUtama extends StatefulWidget {
   const PageUtama({Key? key}) : super(key: key);

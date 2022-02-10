@@ -67,9 +67,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final listImage = [
       'asset/logofixxxx.png',
-      'asset/abualikotak.png',
-      'asset/chaerunnisakotak.jpg',
-      'asset/srikotak.jpg',
+      'asset/beranda2222222.png',
+      'asset/branda1.png',
     ];
 
     final RxInt indexOf = 0.obs;
@@ -109,21 +108,27 @@ class _HomePageState extends State<HomePage> {
                         },
                       ).toList()),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 320, top: 20),
-                  child: Switch(
-                    activeColor: Colors.white,
-                    activeTrackColor: Colors.green,
-                    inactiveThumbColor: Colors.white,
-                    inactiveTrackColor: Colors.red,
-                    // activeThumbImage: AssetImage('asset/logo app.png'),
-                    // inactiveThumbImage: AssetImage('asset/logo app.png'),
-                    value: statusSwitch,
-                    onChanged: (value) {
-                      setState(() {
-                        statusSwitch = !statusSwitch;
-                      });
-                    },
+                Positioned(
+                  right: 15,
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Switch(
+                        activeColor: Colors.white,
+                        activeTrackColor: Colors.green,
+                        inactiveThumbColor: Colors.white,
+                        inactiveTrackColor: Colors.red,
+                        // activeThumbImage: AssetImage('asset/logo app.png'),
+                        // inactiveThumbImage: AssetImage('asset/logo app.png'),
+                        value: statusSwitch,
+                        onChanged: (value) {
+                          setState(() {
+                            statusSwitch = !statusSwitch;
+                          });
+                        },
+                      ),
+                    ),
                   ),
                 ),
                 Positioned(
