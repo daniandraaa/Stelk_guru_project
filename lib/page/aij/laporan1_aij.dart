@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:siswa/page/siswa.dart';
 import 'package:siswa/route/route.dart';
+import 'package:siswa/route/siswa.dart';
 
 class Laporan1Aij extends StatelessWidget {
   const Laporan1Aij({Key? key}) : super(key: key);

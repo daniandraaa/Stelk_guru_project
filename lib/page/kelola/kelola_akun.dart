@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:siswa/page/siswa.dart';
+import 'package:siswa/route/siswa.dart';
 
 Future<List<DatabaseSiswa>> getDataa() async {
   try {

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:siswa/page/laporan_aij_page.dart';
-import 'package:siswa/page/materi_aij.dart';
-import 'package:siswa/page/materitlj.dart';
+import 'package:siswa/page/aij/laporan_aij_page.dart';
+import 'package:siswa/page/aij/materi_aij.dart';
 import 'package:siswa/route/route.dart';
 
-class TljMapelPage extends StatelessWidget {
-  const TljMapelPage({Key? key}) : super(key: key);
+class AIJMapelPage extends StatelessWidget {
+  const AIJMapelPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,17 +32,16 @@ class TljMapelPage extends StatelessWidget {
                         width: MediaQuery.of(context).size.width,
                         height: 80,
                         decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.circular(15),
-                          // boxShadow: [
-                          //   BoxShadow(
-                          //     color: Colors.grey.withOpacity(0.6),
-                          //     spreadRadius: 0.5,
-                          //     blurRadius: 10,
-                          //     offset: const Offset(0, 1),
-                          //   )
-                          // ]
-                        ),
+                            color: Colors.grey[200],
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.4),
+                                spreadRadius: 1,
+                                blurRadius: 5,
+                                offset: const Offset(0, 3),
+                              ),
+                            ]),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 15, vertical: 15),
@@ -51,7 +49,7 @@ class TljMapelPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Teknologi Layanan Jaringan',
+                                'Administrasi Infrastruktur Jaringan',
                                 style: Theme.of(context).textTheme.bodyText2,
                               ),
                               Padding(
@@ -70,8 +68,8 @@ class TljMapelPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      onTap: () =>
-                          Navigator.pushNamed(context, Routes.guru11sri)),
+                      onTap: () => Navigator.pushNamed(
+                          context, Routes.guru7nurfadhilah)),
                   const SizedBox(
                     height: 15,
                   ),
@@ -98,7 +96,7 @@ class TljMapelPage extends StatelessWidget {
                   const Expanded(
                     child: TabBarView(
                       children: [
-                        MateriTlj(),
+                        MateriAij(),
                         LaporanAij(),
                       ],
                     ),

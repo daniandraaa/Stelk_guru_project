@@ -2,8 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:siswa/page/siswa.dart';
 import 'package:siswa/route/route.dart';
+import 'package:siswa/route/siswa.dart';
 
 class HomePagee extends StatefulWidget {
   const HomePagee({Key? key}) : super(key: key);

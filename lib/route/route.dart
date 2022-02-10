@@ -1,60 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:siswa/detailforum.dart';
-import 'package:siswa/detailguru.dart';
-import 'package:siswa/page/agama_mapel.dart';
-import 'package:siswa/page/aij_mapel_page.dart';
-import 'package:siswa/page/asjar_mapel_page.dart';
-import 'package:siswa/page/bab1_agama.dart';
-import 'package:siswa/page/bab1_aij.dart';
-import 'package:siswa/page/bab1_asjar.dart';
-import 'package:siswa/page/bab1_bindo.dart';
-import 'package:siswa/page/bab1_binggris.dart';
-import 'package:siswa/page/bab1_bk.dart';
-import 'package:siswa/page/bab1_mtk.dart';
-import 'package:siswa/page/bab1_penjas.dart';
-import 'package:siswa/page/bab1_pkn.dart';
-import 'package:siswa/page/bab1_pkwu.dart';
-import 'package:siswa/page/bab1_tlj.dart';
-import 'package:siswa/page/bab1_wan.dart';
-import 'package:siswa/page/bab1a_riha_aij.dart';
-import 'package:siswa/page/bab2_agama.dart';
-import 'package:siswa/page/bab2_aij.dart';
-import 'package:siswa/page/bab2_asjar.dart';
-import 'package:siswa/page/bab2_bindo.dart';
-import 'package:siswa/page/bab2_binggris.dart';
-import 'package:siswa/page/bab2_bk.dart';
-import 'package:siswa/page/bab2_penjas.dart';
-import 'package:siswa/page/bab2_pkn.dart';
-import 'package:siswa/page/bab2_pkwu.dart';
-import 'package:siswa/page/bab2_tlj.dart';
-import 'package:siswa/page/bab2_wan.dart';
-import 'package:siswa/page/bahasa_indonesia_mapel.dart';
-import 'package:siswa/page/bahasa_inggris_mapel.dart';
-import 'package:siswa/page/bantuan.dart';
-import 'package:siswa/page/bertanya_forum_page.dart';
-import 'package:siswa/page/bk_mapel.dart';
-import 'package:siswa/page/forum_page.dart';
-import 'package:siswa/page/guru_page.dart';
+import 'package:siswa/page/aij/aij_mapel_page.dart';
+import 'package:siswa/page/aij/bab1_aij.dart';
+import 'package:siswa/page/aij/bab1a_riha_aij.dart';
+import 'package:siswa/page/aij/bab2_aij.dart';
+import 'package:siswa/page/aij/laporan1_aij.dart';
+import 'package:siswa/page/aij/modul1aij.dart';
+import 'package:siswa/page/asjar/asjar_mapel_page.dart';
+import 'package:siswa/page/asjar/bab1_asjar.dart';
+import 'package:siswa/page/asjar/bab2_asjar.dart';
+import 'package:siswa/page/auth/login_page.dart';
+import 'package:siswa/page/detailforum.dart';
+import 'package:siswa/page/detailguru.dart';
+import 'package:siswa/page/home/forum_page.dart';
+import 'package:siswa/page/home/guru_page.dart';
 import 'package:siswa/page/home/kelasku_page.dart';
-import 'package:siswa/page/kebijakanprivasi.dart';
-import 'package:siswa/page/komentar_page.dart';
-import 'package:siswa/page/laporan1_aij.dart';
-import 'package:siswa/page/login_page.dart';
-import 'package:siswa/page/modul1aij.dart';
-import 'package:siswa/page/mtk/bab2_mtk.dart';
-import 'package:siswa/page/mtk/matematika_mapel.dart';
-import 'package:siswa/page/pemberitahuan.dart';
-import 'package:siswa/page/penjas_mapel_page.dart';
-import 'package:siswa/page/pkn_mapel.dart';
-import 'package:siswa/page/pkwu_mapel_page.dart';
-import 'package:siswa/page/prestasi_page.dart';
-import 'package:siswa/page/syaratdanketentuan.dart';
-import 'package:siswa/page/tambah_bab.dart';
-import 'package:siswa/page/tambahmodulbaru.dart';
-import 'package:siswa/page/tentang_kami.dart';
-import 'package:siswa/page/tlj_mapel_page.dart';
+import 'package:siswa/page/home/prestasi_page.dart';
+import 'package:siswa/page/home/tambah_bab.dart';
+import 'package:siswa/page/home/tambahmodulbaru.dart';
+import 'package:siswa/page/kelola/bantuan.dart';
+import 'package:siswa/page/kelola/bertanya_forum_page.dart';
+import 'package:siswa/page/kelola/kebijakanprivasi.dart';
+import 'package:siswa/page/kelola/komentar_page.dart';
+import 'package:siswa/page/kelola/pemberitahuan.dart';
+import 'package:siswa/page/kelola/syaratdanketentuan.dart';
+import 'package:siswa/page/kelola/tentang_kami.dart';
+import 'package:siswa/page/tlj/bab1_tlj.dart';
+import 'package:siswa/page/tlj/bab2_tlj.dart';
+import 'package:siswa/page/tlj/tlj_mapel_page.dart';
 import 'package:siswa/page/tugasbab1binggris.dart';
-import 'package:siswa/page/wan_mapel_page.dart';
+import 'package:siswa/page/wan/bab1_wan.dart';
+import 'package:siswa/page/wan/bab2_wan.dart';
+import 'package:siswa/page/wan/wan_mapel_page.dart';
 
 class Routes {
   static const String kelasku = '/kelasku';
@@ -167,35 +143,16 @@ class Routes {
       case prestasi:
         return pageRoute(const PrestasiPage());
 
-      case binggrismapelpage:
-        return pageRoute(const BinggrisMapelPage());
-
-      case bindomapelpage:
-        return pageRoute(const BindoMapelPage());
-
-      case mtkmapelpage:
-        return pageRoute(const MTKMapelPage());
-
-      case pknmapelpage:
-        return pageRoute(const PKNMapelPage());
-
-      case agamamapelpage:
-        return pageRoute(const AgamaMapelPage());
-
-      case penjasmapelpage:
-        return pageRoute(const PenjasMapelPage());
 
       case aijmapelpage:
         return pageRoute(const AIJMapelPage());
 
-      case bkmapelpage:
-        return pageRoute(const BkMapelPage());
+
 
       case wanmapelpage:
         return pageRoute(const WanMapelPage());
 
-      case pkwumapelpage:
-        return pageRoute(const PkwuMapelPage());
+      
 
       case tljmapelpage:
         return pageRoute(const TljMapelPage());
@@ -212,83 +169,6 @@ class Routes {
       case tambahbab:
         return pageRoute(const TambahBab());
 
-      case bab2binggris:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab2BinggrisPage(
-          playerController: args['controller'],
-        ));
-
-      case bab1bindo:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab1BindoPage(
-          playerController: args['controller'],
-        ));
-
-      case bab2bindo:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab2BindoPage(
-          playerController: args['controller'],
-        ));
-
-      case bab1mtk:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab1MtkPage(
-          playerController: args['controller'],
-        ));
-
-      case bab2mtk:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab2MtkPage(
-          playerController: args['controller'],
-        ));
-
-      case bab1pkn:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab1PknPage(
-          playerController: args['controller'],
-        ));
-
-      case bab2pkn:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab2PknPage(
-          playerController: args['controller'],
-        ));
-
-      case bab1agama:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab1AgamaPage(
-          playerController: args['controller'],
-        ));
-
-      case bab2agama:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab2AgamaPage(
-          playerController: args['controller'],
-        ));
-
-      case bab1penjas:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab1PenjasPage(
-          playerController: args['controller'],
-        ));
-
-      case bab2penjas:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab2PenjasPage(
-          playerController: args['controller'],
-        ));
-
       case bab1aij:
         return pageRoute(
           const Bab1AijPage(),
@@ -298,20 +178,6 @@ class Routes {
         final args = settings.arguments as Map;
 
         return pageRoute(Bab2AijPage(
-          playerController: args['controller'],
-        ));
-
-      case bab1bk:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab1BkPage(
-          playerController: args['controller'],
-        ));
-
-      case bab2bk:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab2BkPage(
           playerController: args['controller'],
         ));
 
@@ -329,19 +195,7 @@ class Routes {
           playerController: args['controller'],
         ));
 
-      case bab1pkwu:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab1PkwuPage(
-          playerController: args['controller'],
-        ));
-
-      case bab2pkwu:
-        final args = settings.arguments as Map;
-
-        return pageRoute(Bab2PkwuPage(
-          playerController: args['controller'],
-        ));
+    
 
       case bab1tlj:
         final args = settings.arguments as Map;
@@ -371,9 +225,7 @@ class Routes {
           playerController: args['controller'],
         ));
 
-      case uploadtugas:
-        return pageRoute(const TugasBab1Binggris());
-
+    
       case komentarpage:
         return pageRoute(const KomentarPage());
 

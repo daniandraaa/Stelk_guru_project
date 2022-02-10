@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:siswa/page/komentar_page.dart';
+import 'package:siswa/page/kelola/komentar_page.dart';
 import 'package:siswa/route/route.dart';
 
 class Behavior extends ScrollBehavior {

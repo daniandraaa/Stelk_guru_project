@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package siswa;
+
+
+service ServiceSiswa {
+    rpc findsiswa(Empty) returns (Siswa);
+}
+
+message Siswa{
+    string nis = 1;
+    string namasiswa = 2;
+    string nomorhp = 3;
+    string email = 4;
+    string foto = 5;
+    string jurusan = 6;
+    string tingkat = 7;
+    string kelas = 8;
+}
+
+message Empty{}

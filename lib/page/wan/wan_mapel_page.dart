@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:siswa/page/laporan_aij_page.dart';
-import 'package:siswa/page/materiasjar.dart';
+import 'package:siswa/page/aij/laporan_aij_page.dart';
+import 'package:siswa/page/wan/materiwan.dart';
 import 'package:siswa/route/route.dart';
 
-class AsjarMapelPage extends StatelessWidget {
-  const AsjarMapelPage({Key? key}) : super(key: key);
+class WanMapelPage extends StatelessWidget {
+  const WanMapelPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +70,7 @@ class AsjarMapelPage extends StatelessWidget {
                         ),
                       ),
                       onTap: () =>
-                          Navigator.pushNamed(context, Routes.guru12raodatul)),
+                          Navigator.pushNamed(context, Routes.guru9ahwan)),
                   const SizedBox(
                     height: 15,
                   ),
@@ -97,7 +97,7 @@ class AsjarMapelPage extends StatelessWidget {
                   const Expanded(
                     child: TabBarView(
                       children: [
-                        MateriAsjar(),
+                        MateriWan(),
                         LaporanAij(),
                       ],
                     ),

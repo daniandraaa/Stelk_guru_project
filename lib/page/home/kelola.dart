@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:siswa/page/kelola_akun.dart';
-import 'package:siswa/page/siswa.dart';
+import 'package:siswa/page/kelola/kelola_akun.dart';
 import 'package:siswa/route/route.dart';
+import 'package:siswa/route/siswa.dart';
 
 class KelolaPage extends StatelessWidget {
   const KelolaPage({Key? key}) : super(key: key);
