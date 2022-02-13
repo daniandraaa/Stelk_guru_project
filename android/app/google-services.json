@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "137939744751-qbo7u9ulreoooe9cr2fsqm7tih4qsfj9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dbrain.guru",
+            "certificate_hash": "71a5e6810105d823e5fde894e4450fca47486eb3"
+          }
+        },
+        {
           "client_id": "137939744751-7a74cefo5pgist1kutc25iffnjlo21mh.apps.googleusercontent.com",
           "client_type": 3
         }

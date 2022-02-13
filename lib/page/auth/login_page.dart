@@ -185,6 +185,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           fillColor: Colors.grey[350],
                           filled: true,
+                          
                           contentPadding: const EdgeInsets.symmetric(
                               vertical: 0, horizontal: 20),
                           border: const OutlineInputBorder(
