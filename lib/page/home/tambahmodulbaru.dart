@@ -135,8 +135,8 @@ class _TambahMobulBaruState extends State<TambahMobulBaru> {
         const SizedBox(
           height: 15,
         ),
-        Text('Tugas Modul'),
-        SizedBox(
+        const Text('Tugas Modul'),
+        const SizedBox(
           height: 10,
         ),
         DropdownButtonFormField(
@@ -165,23 +165,25 @@ class _TambahMobulBaruState extends State<TambahMobulBaru> {
       ]);
     }
     if (selected == 'Tidak ada') {
-      return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        const Text('Catatan'),
-        const TextField(
-          decoration: InputDecoration(
-              hintText: "Tambahkan Catatan",
-              hintStyle: TextStyle(color: Colors.red)),
-        ),
-        const SizedBox(
-          height: 15,
-        ),
-        const Text('Tugas Modul'),
-        const TextField(
-          decoration: InputDecoration(
-              hintText: "Pilih Jenis Tugas Untuk Modul Ini",
-              hintStyle: TextStyle(color: Colors.red)),
-        ),
-      ]);
+      return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text('Catatan'),
+            TextField(
+              decoration: InputDecoration(
+                  hintText: "Tambahkan Catatan",
+                  hintStyle: TextStyle(color: Colors.red)),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Text('Tugas Modul'),
+            TextField(
+              decoration: InputDecoration(
+                  hintText: "Pilih Jenis Tugas Untuk Modul Ini",
+                  hintStyle: TextStyle(color: Colors.red)),
+            ),
+          ]);
     }
     return Container();
   }
@@ -277,26 +279,37 @@ class _TambahMobulBaruState extends State<TambahMobulBaru> {
               ),
             ),
             if (selected != null)
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.indigo[400],
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30))),
-                onPressed: () => Navigator.pushNamed(context, Routes.bab1aij),
-                child: SizedBox(
-                    height: 45,
-                    width: MediaQuery.of(context).size.width,
-                    child: Center(
-                      child: Center(
-                        child: Text(
-                          'Simpan',
-                          style: Theme.of(context)
-                              .textTheme
-                              .button
-                              ?.copyWith(color: Colors.white),
-                        ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 60),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.indigo[400],
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(40))),
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) => const AlertDialog(
+                        content: Text('Berhasil Memperbarui Modul'),
                       ),
-                    )),
+                    );
+                    Navigator.pushNamed(context, Routes.bab1aij);
+                  },
+                  child: SizedBox(
+                      height: 45,
+                      width: MediaQuery.of(context).size.width,
+                      child: Center(
+                        child: Center(
+                          child: Text(
+                            'Simpan',
+                            style: Theme.of(context)
+                                .textTheme
+                                .button
+                                ?.copyWith(color: Colors.white),
+                          ),
+                        ),
+                      )),
+                ),
               ),
           ],
         )),

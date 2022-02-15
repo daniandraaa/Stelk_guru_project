@@ -41,8 +41,18 @@ class TambahBab extends StatelessWidget {
                         primary: Colors.indigo[400],
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30))),
-                    onPressed: () =>
-                        Navigator.pushNamed(context, Routes.aijmapelpage),
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(45)),
+                          content: Text('Berhasil Menambahkan Bab'),
+                        ),
+                      );
+
+                      Navigator.pushNamed(context, Routes.aijmapelpage);
+                    },
                     child: SizedBox(
                         width: MediaQuery.of(context).size.width,
                         height: 45,

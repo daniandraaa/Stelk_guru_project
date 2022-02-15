@@ -28,12 +28,52 @@ class Bab1AijPage extends StatelessWidget {
                       primary: Colors.indigo[400],
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0))),
-                  onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (c) => const TugasBab1Binggris(),
-                    ),
-                  ),
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                              title: const Text(
+                                'Hapus Bab',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              content: const Text(
+                                  'Yakin Anda ingin menghapus Bab ini beserta seluruh modul di dalamnya?'),
+                              actions: [
+                                OutlinedButton(
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.white),
+                                  onPressed: () {
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(45)),
+                                        content: Text('Berhasil Menghapus Bab'),
+                                      ),
+                                    );
+                                    Navigator.pushNamed(
+                                        context, Routes.aijmapelpage);
+                                  },
+                                  child: Text(
+                                    'Ya',
+                                    style: TextStyle(color: Colors.indigo[400]),
+                                  ),
+                                ),
+                                ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.indigo[400]),
+                                  onPressed: () => Navigator.pop(context),
+                                  child: const Text(
+                                    'Tidak',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                              ],
+                            ));
+                  },
                   child: SizedBox(
                       width: 110,
                       child: Center(
