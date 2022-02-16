@@ -49,9 +49,9 @@ class TambahBab extends StatelessWidget {
                               borderRadius: BorderRadius.circular(45)),
                           content: Text('Berhasil Menambahkan Bab'),
                         ),
-                      );
-
-                      Navigator.pushNamed(context, Routes.aijmapelpage);
+                      ).timeout(Duration(seconds: 1),
+                          onTimeout: () => Navigator.pushNamed(
+                              context, Routes.aijmapelpage));
                     },
                     child: SizedBox(
                         width: MediaQuery.of(context).size.width,

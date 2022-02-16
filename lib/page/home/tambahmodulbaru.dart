@@ -292,8 +292,9 @@ class _TambahMobulBaruState extends State<TambahMobulBaru> {
                       builder: (context) => const AlertDialog(
                         content: Text('Berhasil Memperbarui Modul'),
                       ),
-                    );
-                    Navigator.pushNamed(context, Routes.bab1aij);
+                    ).timeout(Duration(seconds: 1),
+                        onTimeout: () =>
+                            Navigator.pushNamed(context, Routes.aijmapelpage));
                   },
                   child: SizedBox(
                       height: 45,
