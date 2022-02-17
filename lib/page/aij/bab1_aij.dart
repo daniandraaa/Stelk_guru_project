@@ -53,9 +53,12 @@ class Bab1AijPage extends StatelessWidget {
                                                 BorderRadius.circular(45)),
                                         content: Text('Berhasil Menghapus Bab'),
                                       ),
-                                    );
-                                    Navigator.pushNamed(
-                                        context, Routes.aijmapelpage);
+                                    ).timeout(Duration(seconds: 1),
+                                        onTimeout: () {
+                                      Navigator.pop(context);
+                                      Navigator.pop(context);
+                                      Navigator.pop(context);
+                                    });
                                   },
                                   child: Text(
                                     'Ya',

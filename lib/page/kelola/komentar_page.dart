@@ -500,6 +500,7 @@ class KomentarPage extends StatelessWidget {
                 padding: const EdgeInsets.all(15),
                 child: TextField(
                   decoration: InputDecoration(
+                    suffixIcon: const Icon(Icons.send),
                     contentPadding:
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
                     hintText: "Tulis Komentar...",

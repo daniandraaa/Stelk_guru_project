@@ -289,7 +289,9 @@ class _TambahMobulBaruState extends State<TambahMobulBaru> {
                   onPressed: () {
                     showDialog(
                       context: context,
-                      builder: (context) => const AlertDialog(
+                      builder: (context) => AlertDialog(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(45)),
                         content: Text('Berhasil Memperbarui Modul'),
                       ),
                     ).timeout(Duration(seconds: 1),

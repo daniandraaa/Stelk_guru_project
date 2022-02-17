@@ -50,6 +50,7 @@ class BertanyaForumPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
+                    suffixIcon: Icon(Icons.send),
                     contentPadding:
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
                     hintText: "Tulis Pertanyaan...",

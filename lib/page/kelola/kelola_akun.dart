@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:siswa/route/route.dart';
 import 'package:siswa/route/siswa.dart';
 
 Future<List<DatabaseSiswa>> getDataa() async {
@@ -112,7 +113,19 @@ class KelolaAkunPage extends StatelessWidget {
                       primary: Colors.indigo[400],
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0))),
-                  onPressed: () {},
+                  onPressed: () => showDialog(
+                      context: context,
+                      builder: (context) => AlertDialog(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(45)),
+                            content: Text('Berhasil Memperbarui Data'),
+                          )).timeout(
+                    Duration(seconds: 1),
+                    onTimeout: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, Routes.kelola);
+                    },
+                  ),
                   child: const SizedBox(
                       width: 160,
                       child: Center(

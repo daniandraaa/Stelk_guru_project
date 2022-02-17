@@ -14,6 +14,7 @@ import 'package:siswa/page/detailguru.dart';
 import 'package:siswa/page/home/forum_page.dart';
 import 'package:siswa/page/home/guru_page.dart';
 import 'package:siswa/page/home/kelasku_page.dart';
+import 'package:siswa/page/home/kelola.dart';
 import 'package:siswa/page/home/prestasi_page.dart';
 import 'package:siswa/page/home/tambah_bab.dart';
 import 'package:siswa/page/home/tambahmodulbaru.dart';
@@ -109,6 +110,7 @@ class Routes {
   static const String bab1modulariha = 'bab1modulariha';
   static const String tugasbab1binggris = '/tugasbab1binggris';
   static const String tambahmodulbaru = '/tambahmodulbaru';
+  static const String kelola = '/kelola';
 
   static var args;
 
@@ -123,16 +125,36 @@ class Routes {
       case kelasku:
         return pageRoute(const KelaskuPage());
 
-        case detailguru: 
-      final Map<String, dynamic> args =
+      case detailguru:
+        final Map<String, dynamic> args =
             settings.arguments as Map<String, dynamic>;
-            return pageRoute(PageDetailguru(mapel: args['mapel'], namaLengkap: args['namaLengkap'], profil: args['profil'], image: args['image'], hubungi: args['hubungi'],));
+        return pageRoute(PageDetailguru(
+          mapel: args['mapel'],
+          namaLengkap: args['namaLengkap'],
+          profil: args['profil'],
+          image: args['image'],
+          hubungi: args['hubungi'],
+        ));
 
-   case detailforum: 
-      final Map<String, dynamic> args =
+      case detailforum:
+        final Map<String, dynamic> args =
             settings.arguments as Map<String, dynamic>;
-            return pageRoute(PageDetailForum(caption1: args['caption1'], caption2: args['caption2'], imagebanner: args['imagebanner'], nama1: args['nama1'], nama2: args['nama2'], guru: args['guru'], title: args['title'], captionguru: args['captionguru'], judulcaptionguru: args['judulcaptionguru'], profil1: args['profil1'], profil2: args['profil2'], profilguru: args['profilguru']));
+        return pageRoute(PageDetailForum(
+            caption1: args['caption1'],
+            caption2: args['caption2'],
+            imagebanner: args['imagebanner'],
+            nama1: args['nama1'],
+            nama2: args['nama2'],
+            guru: args['guru'],
+            title: args['title'],
+            captionguru: args['captionguru'],
+            judulcaptionguru: args['judulcaptionguru'],
+            profil1: args['profil1'],
+            profil2: args['profil2'],
+            profilguru: args['profilguru']));
 
+      case kelola:
+        return pageRoute(const KelolaPage());
 
       case forum:
         return pageRoute(const ForumPage());
@@ -143,16 +165,11 @@ class Routes {
       case prestasi:
         return pageRoute(const PrestasiPage());
 
-
       case aijmapelpage:
         return pageRoute(const AIJMapelPage());
 
-
-
       case wanmapelpage:
         return pageRoute(const WanMapelPage());
-
-      
 
       case tljmapelpage:
         return pageRoute(const TljMapelPage());
@@ -195,8 +212,6 @@ class Routes {
           playerController: args['controller'],
         ));
 
-    
-
       case bab1tlj:
         final args = settings.arguments as Map;
 
@@ -225,7 +240,6 @@ class Routes {
           playerController: args['controller'],
         ));
 
-    
       case komentarpage:
         return pageRoute(const KomentarPage());
 
